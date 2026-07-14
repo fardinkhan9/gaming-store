@@ -1,0 +1,48 @@
+nav{
+
+position:fixed;
+width:100%;
+padding:20px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(15px);
+z-index:1000;
+
+}
+
+nav ul{
+
+display:flex;
+gap:40px;
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+position:relative;
+
+}
+
+nav a::after{
+
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#00c8ff;
+left:0;
+bottom:-5px;
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}

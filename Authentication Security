@@ -1,0 +1,55 @@
+const bcrypt = require("bcrypt");
+
+const hashedPassword = await bcrypt.hash(password, 10);
+
+const match = await bcrypt.compare(password, user.password);
+
+if(!match){
+    return res.status(401).json({
+        message:"Wrong password"
+    });
+}
+
+const jwt=require("jsonwebtoken");
+
+const token=jwt.sign(
+
+{id:user._id},
+
+process.env.JWT_SECRET,
+
+{
+expiresIn:"7d"
+}
+
+);
+
+const jwt=require("jsonwebtoken");
+
+module.exports=(req,res,next)=>{
+
+const token=req.headers.authorization?.split(" ")[1];
+
+if(!token){
+
+return res.status(401).json({
+message:"Unauthorized"
+});
+
+}
+
+try{
+
+req.user=jwt.verify(token,process.env.JWT_SECRET);
+
+next();
+
+}catch{
+
+return res.status(401).json({
+message:"Invalid Token"
+});
+
+}
+
+}

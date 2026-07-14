@@ -1,0 +1,39 @@
+<div class="sidebar">
+
+<h2>Gaming Store</h2>
+
+<a href="#">Dashboard</a>
+<a href="#">Products</a>
+<a href="#">Orders</a>
+<a href="#">Users</a>
+<a href="#">Categories</a>
+<a href="#">Coupons</a>
+<a href="#">Reviews</a>
+<a href="#">Settings</a>
+
+</div>
+
+<div class="main">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Sales</h2>
+<h1>$24,500</h1>
+</div>
+
+<div class="card">
+<h2>Orders</h2>
+<h1>352</h1>
+</div>
+
+<div class="card">
+<h2>Customers</h2>
+<h1>140</h1>
+</div>
+
+</div>
+
+</div>
